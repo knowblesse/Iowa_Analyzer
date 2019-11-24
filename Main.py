@@ -38,7 +38,7 @@ SubjectList = np.array([],dtype='<U3')
 DataList = np.ndarray((0,100,7),dtype='int')
 try:
     for dataFile in DATA_FOLDER.iterdir():
-        with open(str(dataFile)) as csvfile:
+        with open(dataFile, 'r', encoding = 'utf-8') as csvfile:
             csvreader = csv.reader(csvfile)
             next(csvreader, None) # skip the header
             data = np.ndarray((0,7),dtype='int')
