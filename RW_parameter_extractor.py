@@ -3,9 +3,6 @@ import csv
 import numpy as np
 from loadData import loadData
 from multiprocessing import Pool
-from matplotlib import pyplot as plt
-import matplotlib
-matplotlib.rcParams["font.family"] = 'Malgun Gothic'
 
 def RW_param_evaluator(alpha, it, choice, result):
     """

@@ -2,6 +2,9 @@ import csv
 import numpy as np
 from pathlib import Path
 from matplotlib import pyplot as plt
+import matplotlib
+matplotlib.rcParams["font.family"] = 'Malgun Gothic'
+
 
 def imshow_score(output_score, output_param, subject):
     fig = plt.figure()
@@ -53,3 +56,6 @@ def parameterGraph(DATA_PATH=Path("C:/VCF/Iowa_Analyzer/RW_result.csv")):
     ax[1].set_xlabel('Name')
     ax[1].set_ylim(0, 2)
     fig.show()
+
+# imshow_score(output_score, output_param, 0)
+parameterGraph()
