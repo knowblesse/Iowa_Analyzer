@@ -90,26 +90,3 @@ if __name__ == '__main__':
         with open('RW_result.csv','a', newline='') as csvfile:
             cw = csv.writer(csvfile, delimiter =',')
             cw.writerow([SubjectList[subject],x_arr[ind[0]], y_arr[ind[1]]])
-
-    #Draw plot
-    fig = plt.figure()
-    ax = fig.subplots(1,2)
-
-    # main line
-    ax[0].set_title('learning rate')
-    ax[0].plot(np.arange(len(SubjectList)), np.sort(output_param[:,2]), 'o-')
-    ax[0].set_xticks(np.arange(len(SubjectList)))
-    ax[0].set_xticklabels(SubjectList[np.argsort(output_param[:,2])], rotation=90)
-    ax[0].set_xlabel('Name')
-    ax[0].set_ylim(0,2)
-    # base line
-    ax[0].plot([0, len(SubjectList)-1], [1, 1], 'r--')
-
-    # main line
-    ax[1].set_title('inverse temperature')
-    ax[1].plot(np.arange(len(SubjectList)), np.sort(output_param[:,3]), 'o-')
-    ax[1].set_xticks(np.arange(len(SubjectList)))
-    ax[1].set_xticklabels(SubjectList[np.argsort(output_param[:,3])], rotation=90)
-    ax[1].set_xlabel('Name')
-    ax[1].set_ylim(0, 2)
-    fig.show()
