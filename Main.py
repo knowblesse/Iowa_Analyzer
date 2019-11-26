@@ -68,7 +68,7 @@ ax2.set_title('Best Choice Ratio')
 # main line
 ax2.plot(np.arange(numFile),np.sort(OUTPUT[:,3])/100,'o-')
 ax2.set_xticks(np.arange(numFile))
-ax2.set_xticklabels(SubjectList[np.argsort(OUTPUT[:,0])],rotation=90)
+ax2.set_xticklabels(SubjectList[np.argsort(OUTPUT[:,3])],rotation=90)
 ax2.set_xlabel('Name')
 ax2.set_ylabel('Ratio')
 # base line
